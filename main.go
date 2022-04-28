@@ -153,5 +153,10 @@ func sendMessageTasks(
 		),
 		chromedp.Click("div[data-slate-node=element]"),
 		chromedp.KeyEvent(message + kb.Enter),
+		chromedp.ActionFunc(func(ctx context.Context) error {
+			// なぜかキーイベントで入力を行うと入力前に処理が終了してしまうので数秒待つ
+			time.Sleep(3 * time.Second)
+			return nil
+		}),
 	}
 }
