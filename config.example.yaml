@@ -1,0 +1,10 @@
+# ログインするDiscordアカウント設定
+account:
+  email: 'discord account email'
+  password: 'discord account password'
+
+# メッセージ送信の対象となるサーバーやチャンネルなどのデフォルト設定
+default:
+  server: 'default server name'
+  channel: 'default channel name'
+  message: 'default message'
